@@ -12,18 +12,17 @@ export class FormRegisterComponent implements OnInit {
   public formData: FormGroup;
   @Output() formSubmit = new EventEmitter();
 
-  constructor(
-    private FormBuilder: FormBuilder
-  ) { }
+  constructor(private fb: FormBuilder) {
+  }
 
   private resetForm = ()  => {
-    this.formData = this.FormBuilder.group({
+    this.formData = this.fb.group({
       
-      first_name: [ 'Julien', Validators.required ],
-      last_name: [ 'Noyer', Validators.required ],
-      email: [ 'juju@juju.com', Validators.required ],
-      password: [ '12345', Validators.required ],
-      password_repeate: [ '12345', Validators.required ],
+      first_name: [ 'Fabien', Validators.required ],
+      last_name: [ 'Marques', Validators.required ],
+      email: [ 'fabi@gmai.coum', [Validators.required, Validators.email]],
+      password: [ '12345', [Validators.required,Validators.minLength(3)]],
+      password_repeate: [ '12345', [Validators.required,Validators.minLength(3)]],
       street: [ '21, boulevard de la République', Validators.required ],
       city: [ 'Aix-en-Provence', Validators.required ],
       country: [ 'France', Validators.required ],

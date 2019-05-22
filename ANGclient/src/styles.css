@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+.categories-collection li {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  font-family:Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+.categories-collection {
+  text-align: center;
+}
+
+ul.categories-collection li.active {
+  color: white;
+  background-color: gray;
+}
+
+mat-error {
+  color: red;
+}
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+}
+
+img {
+  max-width: 45%;
+}
+
+.alimentation {
+  background-color: #f44336;
+  color: white;
+}
+
+.services {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.beaute--sante-et-bien-etre{
+  background-color: rgb(255, 193, 7);
+  color: white;
+}
+
+.restauration {
+  background-color: rgb(205, 220, 57);
+  color: white;
+}
+
+.maison-et-deco {
+  background-color: rgb(233, 30, 99);
+  color: white;
+}
+
+.loisirs-et-divertissements {
+  background-color: rgb(96, 125, 139);
+  color: white;
+
+}
+
+.sub-nav {
+  margin-right: 10px;
+}

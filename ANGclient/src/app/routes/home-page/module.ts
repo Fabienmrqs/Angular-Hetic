@@ -8,16 +8,19 @@ Imports
     // Inner
     import { HomePageComponent } from './home-page.component';
     import { Routing } from "./router";
-//
+    import { CustomersComponent} from "../../components/customers/customers.component";
+    import {MatDividerModule} from '@angular/material/divider';
+
 
 
 /* 
 Definition 
 */
     @NgModule({
-        declarations: [ HomePageComponent ],
+        declarations: [ HomePageComponent, CustomersComponent ],
         imports: [ 
-            CommonModule, 
+            CommonModule,
+          MatDividerModule,
 
             // Ajouter le router dans la tableau des imports
             Routing

@@ -5,8 +5,11 @@ Imports
     import { NgModule } from '@angular/core';
     import { CommonModule } from '@angular/common';
     import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {MatFormFieldModule} from '@angular/material/form-field';
 
-    // Inner
+
+
+// Inner
     import { RegisterPageComponent } from './register-page.component';
     import { Routing } from "./router";
     import { FormRegisterComponent } from "../../components/form-register/form-register.component";
@@ -22,6 +25,7 @@ Definition
             CommonModule, 
             FormsModule,
             ReactiveFormsModule,
+          MatFormFieldModule,
 
             // Ajouter le router dans la tableau des imports
             Routing

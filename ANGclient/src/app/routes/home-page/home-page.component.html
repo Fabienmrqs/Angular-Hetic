@@ -1,3 +1,13 @@
-<p>
-  home-page works!
-</p>
+<ul class="categories-collection" *ngIf="categoriesCollection">
+  <li *ngFor="let item of categoriesCollection" (click)="sortCustomers(item)"
+      [ngClass]="{'active': item.slug === activeCategory}" [textContent]="item.name" [class]="item.slug">
+  </li>
+</ul>
+
+
+<ul  *ngIf="customersCollection">
+  <li *ngFor="let item of customersCollection">
+    <app-customers [customers]="item" [class]="item.category.slug"></app-customers>
+  </li>
+</ul>
+
